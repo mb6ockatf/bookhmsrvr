@@ -1,19 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="utf8">
-	<link href="../static/main.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link
+		href="https://fonts.googleapis.com/icon?family=Material+Icons"
+		rel="stylesheet">
+	<link href="../static/borders.css" rel="stylesheet">
+	<link href="../static/body.css" rel="stylesheet">
 	<link rel="icon" href="../static/favicon.ico">
 	<title>bookhmsrvr</title>
 </head>
 <body>
-	<h2>
-		<strong>
-			<a href="/"><ins>Book Storage</ins></a>
-	<!--   -->
-		</strong>
-	</h2>
-	{% block content %}{% endblock %}
-	<a href="https://github.com/mb6ockatf/bookhmsrvr/">Source code</a>
+	<header>
+		<a href="/">
+			<span class="material-symbols-rounded">book</span>
+		</a>
+		<div>
+			<p><strong>bookhmsrvr</strong></p>
+		</div>
+	</header>
+	<article>
+	{% block content %}
+	{% endblock %}
+	</article>
+	<footer>
+		<div class="footer-button">
+			<a href="https://www.vim.org/" target="_blank" hreflang="en">
+				<img src="https://www.vim.org/images/vim_powered_greenblack.gif"
+						 alt="vim-powered">
+			</a>
+		</div>
+		<div class="footer-button">
+			<a href="https://github.com/mb6ockatf/bookhmsrvr" target="_blank"
+																												hreflang="en">
+				<img
+					src="https://upload.wikipedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+					width="36" height="36" loading="lazy" decoding="async" alt="gh-repo">
+			</a>
+		</div>
+		<address>Written by a <a href="mailto:mdddmmmm@ya.ru">mb6ockatf</a>
+			<br>
+			Russia
+		</address>
+	</footer>
 </body>
 </html>
+
