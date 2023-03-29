@@ -1,0 +1,58 @@
+h1 {
+	font-size: xxx-large;
+	padding: 1%;
+}
+
+h2 {
+	font-size: xx-large;
+	color: Colar;
+	padding: 1%;
+}
+
+h3 {
+	font-size: x-large;
+}
+
+p::first-letter {
+	font-size: xx-large;
+}
+
+a:link {
+	color: MediumSpringGreen;
+	text-decoration: none;
+}
+
+a:visited {
+	color: LightPink;
+	text-decoration: none;
+}
+
+a:hover {
+	color: Ivory;
+	text-decoration: none;
+}
+
+a:active {
+	color: Gold;
+	text-decoration: none;
+}
+
+table {
+	border: thick solid black;
+	padding: 1%;
+}
+
+td, th {
+	border: thick dotted black;
+	padding: 1%;
+}
+
+details {
+	padding: 1%;
+}
+
+details summary {
+	padding: 1%;
+	color: Coral;
+}
+
