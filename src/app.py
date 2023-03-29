@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 import sys
+from os import getenv
 from flask import Flask, redirect, url_for, render_template
 from werkzeug.exceptions import HTTPException
 
 
-app = Flask("bookhmsrvr")
+app = Flask(__name__)
 app.secret_key = sys.argv[1].encode()
 app.permanent_session_lifetime = False
 
@@ -16,7 +17,7 @@ def hello():
 
 @app.route("/favicon.ico")
 def favicon():
-    return redirect(url_for('favicon.ico'))
+    return redirect(url_for("favicon.ico"))
 
 
 @app.errorhandler(HTTPException)
@@ -30,6 +31,9 @@ def other_error_handler(error):
 
 
 if __name__ == "__main__":
-    from waitress import serve
-    serve(app, host="127.0.0.1", port=8080)
+    if getenv("FLASK_DEBUG"):
+        app.run(debug=True)
+    else:
+        from waitress import serve
+        serve(app, host="127.0.0.1", port=8080)
 
