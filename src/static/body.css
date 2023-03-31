@@ -1,29 +1,28 @@
 h1 {
-	font-size: xxx-large;
+	/*font-size: xxx-large;*/
 	padding: 1%;
 }
 
 h2 {
-	font-size: xx-large;
-	color: Colar;
+/*	font-size: xx-large;*/
 	padding: 1%;
 }
 
 h3 {
-	font-size: x-large;
+/*	font-size: x-large;*/
 }
 
 p::first-letter {
-	font-size: xx-large;
+/*	font-size: x-large;*/
 }
 
 a:link {
-	color: MediumSpringGreen;
+	color: lawngreen;
 	text-decoration: none;
 }
 
 a:visited {
-	color: LightPink;
+	color: lightsteelblue;
 	text-decoration: none;
 }
 
@@ -55,4 +54,24 @@ details summary {
 	padding: 1%;
 	color: Coral;
 }
+
+.container {
+	margin: 1%;
+	padding: 2%;
+}
+
+.material-symbols-rounded {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 700,
+  'GRAD' 200,
+  'opsz' 48;
+	margin: 1%;
+}
+
+#error-message {
+	border: thick double orange;
+	font-size: large;
+}
+
 

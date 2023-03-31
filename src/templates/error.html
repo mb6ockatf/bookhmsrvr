@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
-<b>Server has returned an error:</b>
-<h2>{{error}}</h2>
+<div class="container" id="error-message">
+		<span class="material-symbols-rounded">error</span></br>
+		<b>Server has returned an error:</b>
+		<p>{{error}}</p>
+</div>
 {% endblock %}
 

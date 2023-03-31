@@ -2,11 +2,9 @@ body {
 	font-family: monospace;
 	color: Beige;
 	background-color: DarkSlateGray;
-	font-size: large;
-	display: table;
-	height: 100%;
-	width: 100%;
+	font-weight: normal;
 	margin: auto;
+	padding-bottom:2.5rem;
 }
 
 header {
@@ -20,14 +18,16 @@ header div {
 	float: right;
 	margin-top: auto;
 	margin-right: 3%;
-	font-size: xx-large;
 }
 
 footer {
-  display: table-row;
-  height: 0;
   color: black;
-  background-color: grey;
+	display: table;
+	width: 100%;
+  background: grey;
+	background-color: grey;
+  font-weight: bold;
+  font-size: 14px;
 }
 
 footer img {
@@ -39,24 +39,6 @@ footer img {
 address {
   float: left;
   padding: 3%;
-}
-
-.material-icons {
-	font-family: "Material Icons";
-	font-weight: normal;
-	font-style: normal;
-	font-size: 24px;  /* Preferred icon size  */
-	display: inline-block;
-	line-height: 1;
-	text-transform: none;
-	letter-spacing: normal;
-	word-wrap: normal;
-	white-space: nowrap;
-	direction: ltr;
-	-webkit-font-smoothing: antialised;
-	text-rendering: optimizeLegibility;
-	-moz-osx-font-smoothing: grayscale;
-	font-feature-settings: "liga";
 }
 
 @media (screen and max-device-width: 480px) {
