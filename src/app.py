@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 import sys
-from os import getenv
 from flask import Flask, redirect, url_for, render_template
 from werkzeug.exceptions import HTTPException
 from waitress import serve
@@ -41,7 +40,7 @@ def other_error_handler(error):
 
 if __name__ == "__main__":
     config = configuration("config.ini")
-    if getenv("FLASK_DEBUG"):
+    if config["application"]["debug"] == True:
         app.run(debug=True)
     else:
         serve(app, host="127.0.0.1", port=8080)
