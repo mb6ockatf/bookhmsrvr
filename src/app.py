@@ -41,7 +41,6 @@ def other_error_handler(error):
 
 if __name__ == "__main__":
     config = configuration("config.ini")
-    initialize(config)
     if getenv("FLASK_DEBUG"):
         app.run(debug=True)
     else:

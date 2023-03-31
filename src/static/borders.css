@@ -1,0 +1,51 @@
+body {
+	font-family: monospace;
+	color: Beige;
+	background-color: DarkSlateGray;
+	font-weight: normal;
+	margin: auto;
+	padding-bottom:2.5rem;
+}
+
+header {
+  background-color: grey;
+  color: black;
+  padding: 1%;
+  margin: auto;
+}
+
+header div {
+	float: right;
+	margin-top: auto;
+	margin-right: 3%;
+}
+
+footer {
+  color: black;
+	display: table;
+	width: 100%;
+  background: grey;
+	background-color: grey;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+footer img {
+  margin: 1%;
+  float: right;
+}
+
+
+address {
+  float: left;
+  padding: 3%;
+}
+
+@media (screen and max-device-width: 480px) {
+
+}
+
+@media (screen and min-device-width: 1280px) {
+
+}
+
