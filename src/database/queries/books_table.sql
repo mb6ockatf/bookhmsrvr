@@ -13,16 +13,11 @@ CREATE TABLE IF NOT EXISTS books (
 	viewerscounter    int          DEFAULT 0,
 	downloadscounter  int          DEFAULT 0,
 	epub              bytea        DEFAULT NULL,
-	epubsize          bigint       DEFAULT NULL,
+	epubsize          bigint       DEFAULT 0,
 	pdf               bytea        DEFAULT NULL,
-	pdfsize           bigint       DEFAULT NULL,
+	pdfsize           bigint       DEFAULT 0,
 	-- ------------------------constraints-------------------------------------
 	PRIMARY KEY (id),
 	-- same author cannot write same book twice, right?
-	UNIQUE (name, author),
-	CHECK (pages            > 0),
-	CHECK (viewerscounter   > 0),
-	CHECK (downloadscounter > 0),
-	CHECK (epubsize         > 0),
-	CHECK (pdfsize          > 0)
+	UNIQUE (name, author)
 );

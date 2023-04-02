@@ -16,8 +16,24 @@ INSERT INTO books (
 	viewerscounter,    -- int unsigned      default 0
 	downloadscounter,  -- int unsigned      default 0
 	epub,              -- bytea             default null
-	epubsize,          -- bigint unsigned   default null
+	epubsize,          -- bigint unsigned   default 0
 	pdf,               -- bytea             default null
-	pdfsize            -- bigint unsigned   default null
+	pdfsize            -- bigint unsigned   default 0
 )
-VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+VALUES (
+	%(name)s,
+	%(author)s,
+	%(duedate)s,
+	%(language)s,
+	%(pages)s,
+	%(genre)s,
+	%(description)s,
+	%(wikilink)s,
+	%(rating)s,
+	%(viewerscounter)s,
+	%(downloadscounter)s,
+	%(epub)s,
+	%(epubsize)s,
+	%(pdf)s,
+	%(pdfsize)s
+);
