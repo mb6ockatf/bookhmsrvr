@@ -10,6 +10,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <!-- ## [0.0.1] - 2023-03-05 -->
 
 ### Added
+- main page
+- http error handlers
+- config loading mechanism
+- database QueryManager
+- database table schemes: books, authors, reviews, users
 
 ### Fixed
 
