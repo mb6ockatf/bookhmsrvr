@@ -10,4 +10,3 @@ deactivate 2>/dev/null
 python3 -m pip install -r requirements.txt
 export EXPLAIN_TEMPLATE_LOADING=true
 export FLASK_DEBUG=true
-

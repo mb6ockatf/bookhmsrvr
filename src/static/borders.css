@@ -35,12 +35,12 @@ footer img {
   float: right;
 }
 
-
 address {
   float: left;
   padding: 3%;
 }
 
+/*
 @media (screen and max-device-width: 480px) {
 
 }
@@ -48,4 +48,4 @@ address {
 @media (screen and min-device-width: 1280px) {
 
 }
-
+*/
