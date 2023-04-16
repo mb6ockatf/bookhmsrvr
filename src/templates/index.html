@@ -1,5 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
-
+{% if top_book_list != "None" %}
+    <h2>Here're some popular ones:</h2>
+    {% for book in top_book_list %}
+        <div class="container">
+            <a href="{{ book_link }}">{{ book.name }} by {{ book.author }}</a>
+        </div>
+    {% endfor %}
+{% else %}
+    <h2>No books here yet</h2>
+    <p>Addd more with special script in <code>src/add_data</code></p>
+{% endif%}
 {% endblock %}
 
