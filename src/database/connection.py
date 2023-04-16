@@ -1,6 +1,6 @@
 import os
 from logging import info, critical, error
-from psycopg2 import connect
+from psycopg2 import connect, ProgrammingError
 
 
 class DatabaseConnection:
@@ -30,11 +30,13 @@ class DatabaseConnection:
         try:
             if data:
                 cursor.execute(query, data)
-                result = cursor.fetchall()
             else:
                 if debug:
                     info(query)
                 cursor.execute(query)
+            result = cursor.fetchall()
+        except ProgrammingError as e:
+            info("no data to fetch")
         except BaseException as e:
             self.close()
             critical_message = "query failed to execute:\n"
