@@ -2,6 +2,8 @@
 from sys import argv
 from logging import WARNING
 from dataclasses import dataclass
+from datetime import datetime
+from pprint import pprint
 from flask import Flask, request, redirect, url_for, render_template
 from werkzeug.exceptions import HTTPException
 from waitress import serve
@@ -11,8 +13,7 @@ from add_data import add_data
 
 
 def get_safe_url(url: str) -> str:
-    url = url.replace(" ", "_")
-    return url
+    return url.replace(" ", "_")
 
 
 @dataclass
@@ -25,6 +26,22 @@ class BookExpressEntry:
         result = f"/books/{self.author}/{self.name}"
         result = get_safe_url(result)
         return result
+
+
+@dataclass
+class BookEntry:
+    name: str
+    author: str
+    datetime.date: str
+    language: str
+    pages: str
+    description: str
+    wikilink: str
+    rating: str
+    viewerscounter: int
+    downloadscounter: int
+    epubsize: int
+    pdfsize: int
 
 
 app = Flask(__name__)
@@ -52,7 +69,6 @@ if DEBUG:
 @app.route('/')
 def index():
     """main page"""
-    # name, author
     query = queries_manager["select_some_books"]
     books_list = []
     result = db_connection.execute_query(query)
@@ -67,10 +83,24 @@ def index():
 @app.route('/books/<author>/<book>')
 def book(author: str, book: str):
     """return book page"""
-    """
-    author = request.args.get("author")
-    book_name = request.args.get("book_name")"""
-    return render_template("book.html")
+    query = queries_manager["select_book"]
+    book, author = book.replace("_", " "), author.replace("_", " ")
+    query_data = (book, author)
+    result = db_connection.execute_query(query, query_data)[0]
+    template_data = dict()
+    template_data["author"] = result[0]
+    template_data["book"] = book
+    template_data["duedate"] = result[1]
+    template_data["language"] = result[2]
+    template_data["pages"] = result[3]
+    template_data["description"] = result[4]
+    template_data["wikilink"] = result[5]
+    template_data["rating"] = result[6]
+    template_data["viewerscounter"] = result[7]
+    template_data["downloadscounter"] = result[8]
+    template_data["epubsize"] = result[9]
+    template_data["pdfsize"] = result[10]
+    return render_template("book.html", **template_data)
 
 
 @app.route("/favicon.ico")
@@ -78,7 +108,7 @@ def favicon():
     """favicon picture"""
     return redirect(url_for("favicon.ico"))
 
-"""
+
 @app.errorhandler(HTTPException)
 def http_error_handler(error):
     '''http error page'''
@@ -89,7 +119,7 @@ def http_error_handler(error):
 def other_error_handler(error):
     '''system error handler. returns internal server error http code'''
     return render_template("error.html", error=error), 500
-"""
+
 
 if DEBUG:
     app.run(debug=True)
