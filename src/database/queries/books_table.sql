@@ -1,8 +1,7 @@
 CREATE TABLE IF NOT EXISTS books (
 	id                SERIAL,
 	name              varchar(100) NOT NULL,
-	author            varchar(50)  NOT NULL
-	REFERENCES authors (name) ON DELETE SET NULL (author),
+	author            varchar(50)  NOT NULL REFERENCES authors (name),
 	duedate           date         DEFAULT NULL,
 	language          char(2)      DEFAULT NULL,
 	pages             smallint     DEFAULT NULL,

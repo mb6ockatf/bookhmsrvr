@@ -1,23 +1,23 @@
 body {
-	font-family: monospace;
+	font-family: "Liberation Mono", monospace;
 	color: Beige;
 	background-color: DarkSlateGray;
 	font-weight: normal;
 	margin: auto;
 	padding-bottom:2.5rem;
+	font-size: x-large;
 }
 
 header {
   background-color: grey;
   color: black;
-  padding: 1%;
+  padding: 3%;
   margin: auto;
 }
 
 header div {
 	float: right;
-	margin-top: auto;
-	margin-right: 3%;
+	margin-left: 3%;
 }
 
 footer {
@@ -27,7 +27,7 @@ footer {
   background: grey;
 	background-color: grey;
   font-weight: bold;
-  font-size: 14px;
+	font-style: normal;
 }
 
 footer img {
@@ -35,12 +35,12 @@ footer img {
   float: right;
 }
 
-
 address {
   float: left;
   padding: 3%;
 }
 
+/*
 @media (screen and max-device-width: 480px) {
 
 }
@@ -48,4 +48,4 @@ address {
 @media (screen and min-device-width: 1280px) {
 
 }
-
+*/

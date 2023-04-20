@@ -4,7 +4,7 @@
 -- cannot write same book twice
 
 INSERT INTO books (
-    name,              -- varchar(100)      required
+  name,              -- varchar(100)      required
 	author,            -- varchar(50)       required
 	duedate,           -- date              default null
 	language,          -- char(2)           default null
@@ -20,20 +20,5 @@ INSERT INTO books (
 	pdf,               -- bytea             default null
 	pdfsize            -- bigint unsigned   default 0
 )
-VALUES (
-	%(name)s,
-	%(author)s,
-	%(duedate)s,
-	%(language)s,
-	%(pages)s,
-	%(genre)s,
-	%(description)s,
-	%(wikilink)s,
-	%(rating)s,
-	%(viewerscounter)s,
-	%(downloadscounter)s,
-	%(epub)s,
-	%(epubsize)s,
-	%(pdf)s,
-	%(pdfsize)s
-);
+VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+ON CONFLICT (name, author) DO NOTHING;

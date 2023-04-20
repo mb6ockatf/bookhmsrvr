@@ -4,15 +4,15 @@
 	<meta charset="utf8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-	<link href="../static/borders.css" rel="stylesheet">
-	<link href="../static/body.css" rel="stylesheet">
-	<link rel="icon" href="../static/favicon.ico">
+	<link href="{{ url_for('static', filename='borders.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='body.css') }}" rel="stylesheet">
+	<link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
 	<title>bookhmsrvr</title>
 </head>
 <body>
 	<header>
 		<a href="/">
-			<img src="../static/book.svg" alt="book logo"
+			<img src="{{ url_for('static',filename='book.svg') }}" alt="book logo"
 				width="52" height="52" loading="lazy" decoding="async">
 		</a>
 		<div>
@@ -45,4 +45,3 @@
 	</footer>
 </body>
 </html>
-
