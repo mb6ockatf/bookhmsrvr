@@ -4,7 +4,7 @@ from logging import WARNING
 from dataclasses import dataclass
 from datetime import datetime
 from pprint import pprint
-from flask import Flask, request, redirect, url_for, render_template
+from flask import Flask, request, redirect, url_for, render_template, escape
 from werkzeug.exceptions import HTTPException
 from waitress import serve
 from functions import configuration, Logger
@@ -14,6 +14,12 @@ from add_data import add_data
 
 def get_safe_url(url: str) -> str:
     return url.replace(" ", "_")
+
+
+def interpret_text(text: str) -> str:
+    text = str(escape(text))
+    text = text.replace("\n", "<br>")
+    return text
 
 
 @dataclass
@@ -83,6 +89,7 @@ def index():
 @app.route('/books/<author>/<book>')
 def book(author: str, book: str):
     """return book page"""
+    splitter = "<br>"
     query = queries_manager["select_book"]
     book, author = book.replace("_", " "), author.replace("_", " ")
     query_data = (book, author)
@@ -93,7 +100,7 @@ def book(author: str, book: str):
     template_data["duedate"] = result[1]
     template_data["language"] = result[2]
     template_data["pages"] = result[3]
-    template_data["description"] = result[4]
+    template_data["description"] = interpret_text(result[4])
     template_data["wikilink"] = result[5]
     template_data["rating"] = result[6]
     template_data["viewerscounter"] = result[7]
