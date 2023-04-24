@@ -1,6 +1,34 @@
 {% extends "base.html" %}
 {% block content %}
-
-
-
+<h1><a href="/authors/{{ author }}">{{ author }}</a></h1>
+<h2>{{ book }}</h2>
+<div id="tables-block">
+	<table cellpadding="10">
+	    <tr><td>language:      </td><td>{{ language }}</td></tr>
+	    <tr><td>was written in:</td><td>{{ duedate }} </td></tr>
+	    <tr><td>contains pages:</td><td>{{ pages }}   </td></tr>
+	</table>
+	<table id="counters" cellpadding="10">
+	    <tr><th>rating</th><th>views</th><th>downloads</th></tr>
+	    <tr>
+	        <td>{{ rating }}          </td>
+	        <td>{{ viewerscounter }}  </td>
+	        <td>{{ downloadscounter }}</td>
+	    </tr>
+	</table>
+</div>
+<article>{{ description | safe }}</article>
+<p>
+	{% if epubsize != 0 %}
+		<button>
+			<a href="/download/{{ author }}/{{ book }}?format=epub">download epub</a>
+		</button>
+	{% endif %}
+	{% if pdfsize != 0 %}
+		<button>
+			<a href="/download/{{ author }}/{{ book }}?format=pdf">download epub</a>
+		</button>
+	{% endif %}
+</p>
+<p><a href="{{ wikilink }}" target="_blank">wiki</a></p>
 {% endblock %}
