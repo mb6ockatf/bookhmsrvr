@@ -1,0 +1,4 @@
+*.md linguist-documentation=false
+*.md linguist-detectable
+*.adoc linguist-documentation=false
+*.adoc linguist-detectable

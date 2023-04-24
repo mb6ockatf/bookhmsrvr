@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<h1><a href="/authors/{{ author }}">{{ author }}</a></h1>
+<div id="tables-block">
+	<table cellpadding="10">
+	    <tr><td>nationality:</td><td>{{ nationality }} </td></tr>
+	    <tr><td>birthday:</td><td>{{ birthday }}   </td></tr>
+	</table>
+	<table id="counters" cellpadding="10">
+	    <tr><th>views</th></tr>
+	    <tr>
+	        <td>{{ viewerscounter }}  </td>
+	    </tr>
+	</table>
+</div>
+<article>{{ description | safe }}</article>
+<p><a href="{{ wikilink }}" target="_blank">wiki</a></p>
+{% endblock %}

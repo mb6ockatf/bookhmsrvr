@@ -1,5 +1,5 @@
 -- increment book page views counter
 
-UPDATE authors
+UPDATE books
 SET viewerscounter = viewerscounter + 1
-WHERE id = %s AND name = %s;
+WHERE name = %s AND author = %s;

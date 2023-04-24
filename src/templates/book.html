@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<h1><a href="/{{ author }}">{{ author }}</a></h1>
+<h1><a href="/authors/{{ author }}">{{ author }}</a></h1>
 <h2>{{ book }}</h2>
 <div id="tables-block">
 	<table cellpadding="10">
@@ -18,6 +18,17 @@
 	</table>
 </div>
 <article>{{ description | safe }}</article>
-<p><a href="{{ wikilink }}">wiki</a></p>
+<p>
+	{% if epubsize != 0 %}
+		<button>
+			<a href="/download/{{ author }}/{{ book }}?format=epub">download epub</a>
+		</button>
+	{% endif %}
+	{% if pdfsize != 0 %}
+		<button>
+			<a href="/download/{{ author }}/{{ book }}?format=pdf">download epub</a>
+		</button>
+	{% endif %}
+</p>
+<p><a href="{{ wikilink }}" target="_blank">wiki</a></p>
 {% endblock %}
-

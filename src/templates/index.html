@@ -3,9 +3,9 @@
 {% if top_book_list != "None" %}
     <h2>Here're some popular ones:</h2>
     {% for book in top_book_list %}
-        <div class="container">
+        <p>
             <a href="{{ book.link() }}">{{ book.name }} by {{ book.author }}</a>
-        </div>
+        </p>
     {% endfor %}
 {% else %}
     <h2>No books here yet</h2>

@@ -1,6 +1,6 @@
 h1        {font-size: xxx-large; margin: 1%;}
-h2        {font-size: xx-large;}
-h3        {font-size: x-large;}
+h2        {font-size: xx-large;  margin: 1%;}
+h3        {font-size: x-large;   margin: 1%;}
 p         {margin: 1%;}
 article   {margin: 1%;}
 a:link    {font-weight: bold; color: lawngreen; text-decoration: none;}
