@@ -3,7 +3,6 @@ from configparser import ConfigParser
 
 
 def configuration(filename: str) -> ConfigParser:
-    """Load configuration && return it"""
     config = ConfigParser()
     try:
         config.read(filename)
@@ -22,5 +21,4 @@ class Logger:
         info("logging is up")
 
     def update_level(self, logging_level):
-        """update logging level without restarting application"""
         getLogger().setLevel(logging_level)

@@ -68,12 +68,12 @@ if DEBUG:
 
 @app.route('/')
 def index():
-    """main page"""
     query = queries_manager["select_some_books"]
     books_list = []
     result = db_connection.execute_query(query)
     for book_data in result:
-        current_book = BookExpressEntry(book_data[0], book_data[1], book_data[2])
+        current_book = BookExpressEntry(book_data[0], book_data[1],
+                                        book_data[2])
         books_list.append(current_book)
     if result is None:
         result = str(result)
@@ -82,7 +82,6 @@ def index():
 
 @app.route('/books/<author>/<book>')
 def book(author: str, book: str):
-    """return book page"""
     query = queries_manager["select_book"]
     book, author = book.replace("_", " "), author.replace("_", " ")
     query_data = (book, author)
@@ -105,19 +104,16 @@ def book(author: str, book: str):
 
 @app.route("/favicon.ico")
 def favicon():
-    """favicon picture"""
     return redirect(url_for("favicon.ico"))
 
 
 @app.errorhandler(HTTPException)
 def http_error_handler(error):
-    '''http error page'''
     return render_template("error.html", error=error), error.code
 
 
 @app.errorhandler(Exception)
 def other_error_handler(error):
-    '''system error handler. returns internal server error http code'''
     return render_template("error.html", error=error), 500
 
 
