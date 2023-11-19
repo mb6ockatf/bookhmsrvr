@@ -1,65 +1,18 @@
-h1 {
-	/*font-size: xxx-large;*/
-	padding: 1%;
-}
-
-h2 {
-/*	font-size: xx-large;*/
-	padding: 1%;
-}
-
-h3 {
-/*	font-size: x-large;*/
-}
-
-p::first-letter {
-/*	font-size: x-large;*/
-}
-
-a:link {
-	color: lawngreen;
-	text-decoration: none;
-}
-
-a:visited {
-	color: lightsteelblue;
-	text-decoration: none;
-}
-
-a:hover {
-	color: Ivory;
-	text-decoration: none;
-}
-
-a:active {
-	color: Gold;
-	text-decoration: none;
-}
-
-table {
-	border: thick solid black;
-	padding: 1%;
-}
-
-td, th {
-	border: thick dotted black;
-	padding: 1%;
-}
-
-details {
-	padding: 1%;
-}
-
-details summary {
-	padding: 1%;
-	color: Coral;
-}
-
-.container {
-	margin: 1%;
-	padding: 2%;
-}
-
+h1        {font-size: xxx-large; margin: 1%;}
+h2        {font-size: xx-large;  margin: 1%;}
+h3        {font-size: x-large;   margin: 1%;}
+p         {margin: 1%;}
+article   {margin: 1%;}
+a:link    {font-weight: bold; color: lawngreen; text-decoration: none;}
+a:visited {color: lightsteelblue; text-decoration: none;}
+a:hover   {color: Ivory; text-decoration: none;}
+a:active  {color: Gold; text-decoration: none;}
+p::first-letter {font-size: x-large;}
+table {border-collapse: collapse; border: thick solid black;
+       width: calc(50% - 10px); margin: 1%;}
+td, th {border: thick dotted black; white-space: nowrap;}
+details {padding: 1%;}
+details summary {padding: 1%; color: Coral;}
 .material-symbols-rounded {
   font-variation-settings:
   'FILL' 1,
