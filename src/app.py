@@ -17,7 +17,6 @@ from add_data import add_data
 
 
 def cleaner():
-    """clear cached files"""
     while True:
         counter = 0
         for file in os.listdir("."):
@@ -90,12 +89,12 @@ if DEBUG:
 
 @app.route('/')
 def index():
-    """main page"""
     query = queries_manager["select_some_books"]
     books_list = []
     result = db_connection.execute_query(query)
     for book_data in result:
-        current_book = BookExpressEntry(book_data[0], book_data[1], book_data[2])
+        current_book = BookExpressEntry(book_data[0], book_data[1],
+                                        book_data[2])
         books_list.append(current_book)
     if result is None:
         result = str(result)
@@ -120,7 +119,6 @@ def author(author: str):
 
 @app.route('/books/<author>/<book>')
 def book(author: str, book: str):
-    """return book page"""
     splitter = "<br>"
     query = queries_manager["select_book"]
     book, author = book.replace("_", " "), author.replace("_", " ")
@@ -165,24 +163,21 @@ def download(author: str, book: str):
     return send_file(book_name, as_attachment=True)
 
 
-
 @app.route("/favicon.ico")
 def favicon():
-    """favicon picture"""
     return redirect(url_for("favicon.ico"))
 
 """
 @app.errorhandler(HTTPException)
 def http_error_handler(error):
-    '''http error page'''
     return render_template("error.html", error=str(error)), error.code
 
 
 @app.errorhandler(Exception)
 def other_error_handler(error):
-    '''system error handler. returns internal server error http code'''
     return render_template("error.html", error=str(error)), 500
 """
+
 
 if DEBUG:
     app.run(debug=True)
