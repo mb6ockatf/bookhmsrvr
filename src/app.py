@@ -167,7 +167,7 @@ def download(author: str, book: str):
 def favicon():
     return redirect(url_for("favicon.ico"))
 
-
+"""
 @app.errorhandler(HTTPException)
 def http_error_handler(error):
     return render_template("error.html", error=str(error)), error.code
@@ -176,6 +176,7 @@ def http_error_handler(error):
 @app.errorhandler(Exception)
 def other_error_handler(error):
     return render_template("error.html", error=str(error)), 500
+"""
 
 
 if DEBUG:
