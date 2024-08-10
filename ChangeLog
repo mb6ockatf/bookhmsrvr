@@ -1,0 +1,280 @@
+commit 5a5d1122698ad8645aa169091285b8345030c144
+Author: mb6ockatf <mdddmmmm@yandex.ru>
+Date:   Sat Aug 10 16:02:13 2024 +0300
+
+    chore(CONTRIBUTING): added
+
+commit 9dd01d03391ab15e23a98b0c852f00810862ff75
+Author: mb6ockatf <mdddmmmm@yandex.ru>
+Date:   Fri Aug 9 21:18:53 2024 +0300
+
+    chore(COPYING): AGPL
+
+commit 81b513a678a7aec59ce5cdb85fe67265be52be4a
+Author: Walter White <mb6ockatf@relay.firefox.com>
+Date:   Tue Mar 19 16:29:14 2024 +0300
+
+    Chores (#2)
+    
+    * chore(CHANGELOG.md): deleted as outdated
+    
+    * temporary
+    
+    * add: restapi
+
+commit 631f5b78aaac40fe4a39500ffd443711ca11bac4
+Author: mb6ockatf <mb6ockatf@relay.firefox.com>
+Date:   Sun Nov 19 12:59:25 2023 +0300
+
+    refactor: improve styling (#1)
+
+commit 290197ab6c19abbfdbde1faf9b8d176d5c512049
+Author: mb6ockatf <mb6ockatf@relay.firefox.com>
+Date:   Sat May 13 11:52:14 2023 +0300
+
+    chore(LICENSE): move to AGPL v3
+
+commit 0cfc9c89c167ff365b8441bb8922dc0b21bef25c
+Author: mb6ockatf <mdddmmmm@yandex.ru>
+Date:   Sat Apr 29 23:30:46 2023 +0300
+
+    refactor (#23)
+
+commit cdaa3596c33de64a4b8e62b6733057095731182d
+Author: mb6ockatf <mdddmmmm@yandex.ru>
+Date:   Mon Apr 24 18:03:44 2023 +0300
+
+    many stuff (#22)
+    
+    * chore(CHANGELOG.md): deleted as outdated
+    
+    * temporary
+    
+    * add: restapi
+
+commit 69055cbd00190154d8af0d96c10a6fd8fc0bebc7
+Author: mb6ockatf <mdddmmmm@yandex.ru>
+Date:   Thu Apr 20 18:36:27 2023 +0300
+
+    add some contents - finally (#21)
+    
+    * refactor: improve styling
+    
+    * revert: remove setup_dev.ps1 script
+    
+    * fix(SQL queries): fix books table
+    
+    * style(configuration files): refactor
+    
+    * docs: update README and CONTRIBUTION
+    
+    * feat: add index.html contents
+    
+    * feat(fix port):
+    
+    * feat: add test.sh script
+    
+    * fix(html pages): paths do better
+    
+    * fix: data config name
+    
+    * fix(css-styling): font size
+    
+    * feat: add contents to main page
+    
+    * fix: content adding script
+    
+    * add(main.py): form handler
+    
+    * fix(borders.css): font name
+
+commit 20d9864b6bf7b012d6a7d620bbeeaf01f33d580f
+Author: mb6ockatf <mdddmmmm@yandex.ru>
+Date:   Mon Apr 3 18:33:09 2023 +0300
+
+    improve initialization & sql queries (#14)
+    
+    * feat(database): add more tables
+    
+    * chore: open for contributions
+    
+    * feat(database): all queries are added
+    
+    * fix(database): improve sql queries
+    
+    * test: add data samples
+    
+    * feat: add data script
+    
+    * refactor(database): improve connection
+    
+    * refactor(src/app.py):
+    
+    * fix(functions): improve initialization
+    
+    * feat(templates): add book page skeleton
+    
+    * refactor: remove outdated file
+    
+    * test(configuration files): example_data.ini & config.ini
+
+commit 7a1e51a6cd9f3a281e21a0e710b7dd3c4a81dc29
+Author: mb6ockatf <mdddmmmm@yandex.ru>
+Date:   Sat Apr 1 16:14:08 2023 +0300
+
+    add first queries (#13)
+    
+    * refactor: remove unneeded main.css
+    
+    * feat(database): add first queries
+
+commit d72faafc1f77e64ecd4cf2a29cd625971ad498f2
+Merge: 6ac0f6c de80f71
+Author: mb6ockatf <mdddmmmm@yandex.ru>
+Date:   Fri Mar 31 19:11:16 2023 +0000
+
+    Merge remote-tracking branch 'origin/4-add-database'
+
+commit de80f71007352f36083ff9e71a659b97862932a7
+Author: mb6ockatf <mb6ockatf@relay.firefox.com>
+Date:   Fri Mar 31 22:06:47 2023 +0300
+
+    feat: add dev environment ps1 script
+
+commit 6ac0f6c9aeb30c6fa4ce9c5900643d815c3af2d5
+Author: mb6ockatf <mdddmmmm@yandex.ru>
+Date:   Fri Mar 31 21:31:32 2023 +0300
+
+    complete frontend, add initialization (#2)
+    
+    * add: serve `/` address
+    
+    * update: usage guide in readme
+    
+    * add: error handlers
+    
+    * add: dev environment script
+    
+    * update: css refactored
+    
+    * update: improve html pages
+    
+    * style(css): update footer, colors
+    
+    index.html and error pages were improved, too
+    
+    * chore(files): remove unneeded ttf fonts
+    
+    * initialization logic (#11)
+    
+    * chore(requirements.txt): add psycopg2
+    
+    * chore: add initialization logic
+
+commit 7481d1c4f2bd6dcceeca3b52a15eb08f2f55e017
+Merge: 2243b29 cb1b20e
+Author: mb6ockatf <mb6ockatf@relay.firefox.com>
+Date:   Fri Mar 31 21:28:51 2023 +0300
+
+    Merge branch 'development-v0.0.1' into 4-add-database
+
+commit 2243b29296e132871b23b220e5385fdb6aa3877d
+Author: mb6ockatf <mb6ockatf@relay.firefox.com>
+Date:   Fri Mar 31 21:22:26 2023 +0300
+
+    chore: add initialization logic
+
+commit 4cb96864c9971ecc2a0ec0b24c3ac3fd0452dcbf
+Author: mb6ockatf <mb6ockatf@relay.firefox.com>
+Date:   Fri Mar 31 18:20:19 2023 +0300
+
+    chore(requirements.txt): add psycopg2
+
+commit cb1b20e5e026544958b12e78a3193575e3c117cd
+Merge: 4b76636 1d92c41
+Author: mb6ockatf <mdddmmmm@yandex.ru>
+Date:   Fri Mar 31 18:14:37 2023 +0300
+
+    Merge pull request #10 from mb6ockatf/3-add-css-styling
+    
+    css styling improved
+
+commit 1d92c417f30be0df477f5cef086880930e34eb9a
+Author: mb6ockatf <mb6ockatf@relay.firefox.com>
+Date:   Fri Mar 31 18:13:31 2023 +0300
+
+    chore(files): remove unneeded ttf fonts
+
+commit 5c398af1d3d98f2d09903d89c23b4eddc4ff9b3a
+Author: mb6ockatf <mb6ockatf@relay.firefox.com>
+Date:   Fri Mar 31 18:00:19 2023 +0300
+
+    style(css): update footer, colors
+    
+    index.html and error pages were improved, too
+
+commit 4b7663694994911eb7ad2ae7f994f0fc81bf57fc
+Author: mb6ockatf <mb6ockatf@relay.firefox.com>
+Date:   Wed Mar 29 19:06:55 2023 +0300
+
+    update: improve html pages
+
+commit cb9a52c40d65b727a47f2858f616a4e9928e47a4
+Author: mb6ockatf <mb6ockatf@relay.firefox.com>
+Date:   Wed Mar 29 19:06:27 2023 +0300
+
+    update: css refactored
+
+commit 8d4c7604690d0dd1f9ea20b918c216e5fba97602
+Author: mb6ockatf <mb6ockatf@relay.firefox.com>
+Date:   Wed Mar 29 19:05:34 2023 +0300
+
+    add: dev environment script
+
+commit dd56be1caea760f0a65fd4acbc15ee9bbe313bf4
+Author: mb6ockatf <mb6ockatf@relay.firefox.com>
+Date:   Sun Mar 26 22:23:51 2023 +0300
+
+    add: error handlers
+
+commit a25f30e4a8e90ce08d40341c21f273d2f42370d7
+Author: mb6ockatf <mb6ockatf@relay.firefox.com>
+Date:   Sun Mar 26 22:02:57 2023 +0300
+
+    update: usage guide in readme
+
+commit 155973f5b01bac39d5dee9430fef9faea2cbb919
+Author: mb6ockatf <mdddmmmm@yandex.ru>
+Date:   Thu Mar 23 16:50:34 2023 +0000
+
+    add: serve `/` address
+
+commit e58bb854cca247c48bdd45ada44ccf23fe6ea659
+Merge: 320e0db 4cb2a16
+Author: mb6ockatf <mdddmmmm@yandex.ru>
+Date:   Thu Mar 23 19:25:47 2023 +0300
+
+    Merge pull request #1 from mb6ockatf/initialization
+    
+    add: project structure and empty files
+
+commit 4cb2a1638c4c139f03527c71a8afb780de380673
+Author: mb6ockatf <mdddmmmm@yandex.ru>
+Date:   Thu Mar 23 16:20:13 2023 +0000
+
+    add: basic project structure (src, empty files)
+
+commit 0326de16d301e30decc6910ca014b037556a6c7a
+Author: mb6ockatf <mdddmmmm@yandex.ru>
+Date:   Thu Mar 23 16:16:39 2023 +0000
+
+    add: some descriptive files
+    
+    CHANGELOG.md, CODE_OF_CONDUCT.md, CONTRIBUTION.md are added
+    README.md is updated
+
+commit 320e0db8217e5fe05d4dfc3abd93e182d6f3d995
+Author: mb6ockatf <mdddmmmm@yandex.ru>
+Date:   Thu Mar 23 18:51:33 2023 +0300
+
+    Initial commit
